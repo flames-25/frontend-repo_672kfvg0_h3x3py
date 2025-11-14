@@ -5,42 +5,32 @@
 @layer base {
   :root {
     --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-geist: 'Geist', system-ui, sans-serif;
-    --font-geist-mono: 'Geist Mono', monospace;
-    --font-mona: 'Mona Sans', system-ui, sans-serif;
-    --font-ibm-plex: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-serif: 'Cormorant Garamond', 'Ivy Journal', 'Georgia', serif;
     --font-manrope: 'Manrope', system-ui, sans-serif;
   }
 
   html {
-    font-family: var(--font-sans);
+    font-family: var(--font-manrope);
     font-feature-settings: "rlig" 1, "calt" 1;
+    color-scheme: dark;
+    background: black;
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased bg-black text-white;
   }
+
+  .font-serif { font-family: var(--font-serif); }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
 @layer utilities {
   .animate-in {
     animation-name: animateIn;
-    animation-duration: 350ms;
-    --tw-enter-opacity: initial;
-    --tw-enter-scale: initial;
-    --tw-enter-rotate: initial;
-    --tw-enter-translate-x: initial;
-    --tw-enter-translate-y: initial;
+    animation-duration: 450ms;
   }
 
   .animate-out {
     animation-name: animateOut;
-    animation-duration: 350ms;
-    --tw-exit-opacity: initial;
-    --tw-exit-scale: initial;
-    --tw-exit-rotate: initial;
-    --tw-exit-translate-x: initial;
-    --tw-exit-translate-y: initial;
+    animation-duration: 450ms;
   }
 }
